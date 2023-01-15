@@ -59,13 +59,17 @@ function saveTodos(){
 function addTodo(){
   const textbox = document.getElementById('todo-title');
   const title = textbox.value; 
-
+  
   const datePicker = document.getElementById('date-picker');
   const dueDate = datePicker.value;
 
-  createTodo(title, dueDate);
-
-  render();
+  if(title === ''){
+    alert('You need to define a title')
+  } else { 
+    createTodo(title, dueDate);
+  
+    render();
+  }
 }
 
  function deleteTodo(event){
@@ -83,7 +87,7 @@ function render(){
   document.getElementById('todo-list').innerHTML = '';
 
   todos.forEach(function (todo){
-    let element = document.createElement('div'); 
+    let element = document.createElement('div');
     element.innerText = todo.title  + " " + todo.dueDate;
 
     const deleteButton = document.createElement('button');
@@ -91,9 +95,20 @@ function render(){
     deleteButton.style = 'margin-left: 12px;' 
     deleteButton.onclick = deleteTodo; 
     deleteButton.id = todo.id;
-    element.appendChild(deleteButton);
+    element.appendChild(deleteButton).style.marginRight = '2rem';
+    deleteButton.style.borderRadius = '0.5rem';
+    deleteButton.style.border = 'none';
+    deleteButton.style.height = '2rem';
+    deleteButton.style.backgroundColor = 'rgb(43, 163, 211)';
+    deleteButton.style.color = 'white';
 
     let todoList = document.getElementById('todo-list');
     todoList.appendChild(element);
+    element.style.height = '3rem';
+    element.style.display = 'flex';
+    element.style.justifyContent = 'space-between';
+    element.style.alignItems = 'center';
+    element.style.paddingLeft = '1rem';
+    element.style.fontSize = 'larger';
   });
 }

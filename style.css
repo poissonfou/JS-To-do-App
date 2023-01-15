@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(67, 67, 218);
+}
+
+.to-do-define{
+    background-color: rgb(185, 215, 216);
+    width: 30rem;
+    height: 16rem;
+    margin-left: 25rem;
+}
+
+#todo-list{
+    margin-left: 25rem;
+    background-color: rgb(255, 255, 255);
+    width: 30rem;
+    height: 22.5rem;
+}
+
+.add-button{
+    width: 10rem;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-left: 9rem;
+    border-radius: 2rem;
+    background-color: rgb(43, 163, 211);    
+    border: none;
+}
+
+.dos-div{
+    margin-left: 25rem
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0rem 0 2rem
+}
+
+.date{
+    font-size: 2rem;    
+    font-weight: bold;
+    margin: 0.5rem 0rem 0 2rem
+}
+
+#todo-title{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    border: none;
+    width: 25rem;
+    height: 2rem;
+}
+
+#date-picker:focus, #todo-title:focus{
+    outline: none;
+}
+
+#date-picker{
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    border: none;
+    width: 25rem;
+    height: 2rem;
+}
